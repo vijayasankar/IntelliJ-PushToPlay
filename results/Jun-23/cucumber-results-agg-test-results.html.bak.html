@@ -1,0 +1,91 @@
+<html>
+<head><style type="text/css">h1 {background-color:#9999CC}
+h2 {background-color:#BBBBCC}
+h3 {background-color:#DDDDFF}
+th {border:1px solid black;background-color:#CCCCDD;}
+td{border:1px solid black;}
+table {border:1px solid black;border-collapse: collapse;}
+.chart {border:0px none black;border-collapse: collapse;background-color: none;}
+.passed {background-color:lightgreen;font-weight:bold;color:darkgreen}
+.failed {background-color:tomato;font-weight:bold;color:darkred}
+.undefined {background-color:gold;font-weight:bold;color:goldenrod}
+.skipped {background-color:silver;font-weight:bold;color:darkgray}
+.passed_description {background-color:#D0FFD0;font-weight:bold;font-style:italic;color:black}
+.failed_description {background-color:#FFA898;font-weight:bold;font-style:italic;color:black}
+OL { counter-reset: item }
+OL>LI { display: block }
+OL>LI:before { content: counters(item, ".") " "; counter-increment: item }
+
+div.header {
+    display: block; text-align: center;
+    position: running(header);
+}
+div.footer {
+    display: block; text-align: center;
+    position: running(footer);
+}
+div.content {page-break-after: always;}
+@page {
+	 size: auto;
+     @top-center {
+     	content: "Detailed Results Report";
+	    color: silver;
+	    font-size: 14px;
+     }
+     @top-right {
+     	content: date("dd MMM, yyyy hh:mm");
+	    color: silver;
+	    font-size: 8px;
+     }
+    @bottom-right {
+    	content: "Page " counter(page) " of " counter(pages) ;
+	    color: silver;
+	    font-size: 8px;
+    }
+}
+ol a::after {
+  content: leader('.') target-counter(attr(href), page);
+}
+</style>
+<title>Detailed Results Report</title>
+  </head>
+  <body>
+    <div class='header'></div>
+    <div class='footer'></div>
+  <h1>Overview</h1>
+<table><tr><th></th><th>Passed</th><th>Failed</th><th>Undefined</th><th>%Passed</th></tr><tr><th>Features</th><td class="passed">0</td><td class="failed">1</td><td class="undefined">0</td><td>0.00</td></tr><tr><th>Scenarios</th><td class="passed">1</td><td class="failed">2</td><td class="undefined">0</td><td>33.33</td></tr><tr><th>Steps</th><td class="passed">12</td><td class="failed">2</td><td class="undefined">3</td><td>70.59</td></tr></table><div><b>Overall Duration: 0h 00m 53s</b></div>
+<a id="top"></a><h1>Table of Contents</h1><ol><li> <span class="failed"><a href="#feature-2to-test-all-the-scenarios-when-the-user-is-logged-in">To test all the scenarios when the user is logged in</a></span><ol><li> <span class="passed"><a href="#sc-9-to-test-all-the-scenarios-when-the-user-is-logged-in;enabled-continue-button">Enabled Continue Button</a></span></li><li> <span class="failed"><a href="#sc-14-to-test-all-the-scenarios-when-the-user-is-logged-in;add-new-credit-card">Add new credit card</a></span></li><li> <span class="failed"><a href="#sc-19-to-test-all-the-scenarios-when-the-user-is-logged-in;select-favourites-from-favourite-tab">Select Favourites from Favourite tab</a></span></li></ol></li></ol><h1>Detailed Results Report</h1><table width="700px"><tr class="failed"><td colspan="4"><b>Feature:</b> <a id="feature-2to-test-all-the-scenarios-when-the-user-is-logged-in">To test all the scenarios when the user is logged in</a></td></tr><tr class="failed_description"><td colspan="4"><br></br></td></tr><tr class="failed"><td><small><b>Passed:</b> 1</small></td><td><small><b>Failed:</b> 2</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 53.88s</small></td></tr><tr class="failed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td colspan="4"><b>Background:</b> <a id="sc-null"></a></td></tr><tr class="passed_description"><td colspan="4"><br></br></td></tr><tr class="passed"><td><small><b>Passed:</b> 3</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 11.74s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> I am in MyLotto Site</td><td width="100">4.11s</td></tr><tr class="passed"><td><b>And </b> I Login as registered user</td><td width="100">4.03s</td></tr><tr class="passed"><td><b>And </b> I navigate to PushToPlay page</td><td width="100">3.60s</td></tr></table></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr><tr class="passed"><td colspan="4"><b>Scenario:</b> <a id="sc-9-to-test-all-the-scenarios-when-the-user-is-logged-in;enabled-continue-button">Enabled Continue Button</a></td></tr><tr class="passed_description"><td colspan="4"><br></br></td></tr><tr class="passed"><td><small><b>Passed:</b> 3</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 5.76s</small></td></tr><tr class="passed"><td>Before</td><td colspan="2"></td><td width="100">2.16s</td></tr><tr class="passed"><td colspan="4"><br></br></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> I am logged in</td><td width="100">0.09s</td></tr><tr class="passed"><td><b>When </b> I navigate to PushToPlay page</td><td width="100">2.28s</td></tr><tr class="passed"><td><b>Then </b> the continue button should be enabled</td><td width="100">0.07s</td></tr></table></td></tr><tr class="passed"><td>After</td><td colspan="2"></td><td width="100">1.16s</td></tr><tr class="passed"><td colspan="4"><br></br></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr><tr class="passed"><td colspan="4"><b>Background:</b> <a id="sc-null"></a></td></tr><tr class="passed_description"><td colspan="4"><br></br></td></tr><tr class="passed"><td><small><b>Passed:</b> 3</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 17.37s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> I am in MyLotto Site</td><td width="100">4.31s</td></tr><tr class="passed"><td><b>And </b> I Login as registered user</td><td width="100">2.72s</td></tr><tr class="passed"><td><b>And </b> I navigate to PushToPlay page</td><td width="100">10.34s</td></tr></table></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr><tr class="failed"><td colspan="4"><b>Scenario:</b> <a id="sc-14-to-test-all-the-scenarios-when-the-user-is-logged-in;add-new-credit-card">Add new credit card</a></td></tr><tr class="failed_description"><td colspan="4"><br></br></td></tr><tr class="failed"><td><small><b>Passed:</b> 0</small></td><td><small><b>Failed:</b> 1</small></td><td><small><b>Undefined:</b> 2</small></td><td><small>Duration: 3.18s</small></td></tr><tr class="passed"><td>Before</td><td colspan="2"></td><td width="100">1.54s</td></tr><tr class="passed"><td colspan="4"><br></br></td></tr><tr class="failed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="failed"><td><b>Given </b> I do not have credit card to my account</td><td width="100">0.01s</td></tr><tr class="failed"><td colspan="2"><div><br>org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'L3057', ip: '10.2.60.96', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_73'
+Driver info: driver.version: RemoteWebDriver</br><br>
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)</br><br>
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:66)</br><br>
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)</br><br>
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)</br><br>
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)</br><br>
+	at org.openqa.selenium.By&#36;ByXPath.findElement(By.java:357)</br><br>
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)</br><br>
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)</br><br>
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)</br><br>
+	at com.sun.proxy.&#36;Proxy17.isDisplayed(Unknown Source)</br><br>
+	at stepdefinitions.NewStepDefinition.i_do_not_have_credit_card_to_my_account(NewStepDefinition.java:79)</br><br>
+	at &#10045;.Given I do not have credit card to my account(adhoc.feature:15)</br><br>
+</br></div></td></tr><tr class="skipped"><td><b>When </b> I click Add Credit card</td><td width="100">0.00s</td></tr><tr class="skipped"><td><b>Then </b> I should be navigated to Add Credit card page</td><td width="100">0.00s</td></tr><tr class="skipped"><td colspan="2"><img src="14-to-test-all-the-scenarios-when-the-user-is-logged-in_add-new-credit-card1466646897442.png"  /></td></tr></table></td></tr><tr class="passed"><td>After</td><td colspan="2"></td><td width="100">1.64s</td></tr><tr class="passed"><td colspan="4"><br></br></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr><tr class="passed"><td colspan="4"><b>Background:</b> <a id="sc-null"></a></td></tr><tr class="passed_description"><td colspan="4"><br></br></td></tr><tr class="passed"><td><small><b>Passed:</b> 3</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 12.37s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> I am in MyLotto Site</td><td width="100">3.05s</td></tr><tr class="passed"><td><b>And </b> I Login as registered user</td><td width="100">3.52s</td></tr><tr class="passed"><td><b>And </b> I navigate to PushToPlay page</td><td width="100">5.80s</td></tr></table></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr><tr class="failed"><td colspan="4"><b>Scenario:</b> <a id="sc-19-to-test-all-the-scenarios-when-the-user-is-logged-in;select-favourites-from-favourite-tab">Select Favourites from Favourite tab</a></td></tr><tr class="failed_description"><td colspan="4"><br></br></td></tr><tr class="failed"><td><small><b>Passed:</b> 0</small></td><td><small><b>Failed:</b> 1</small></td><td><small><b>Undefined:</b> 1</small></td><td><small>Duration: 3.46s</small></td></tr><tr class="passed"><td>Before</td><td colspan="2"></td><td width="100">1.82s</td></tr><tr class="passed"><td colspan="4"><br></br></td></tr><tr class="failed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="failed"><td><b>Given </b> I Select Favourite tab</td><td width="100">0.00s</td></tr><tr class="failed"><td colspan="2"><div><br>org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'L3057', ip: '10.2.60.96', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_73'
+Driver info: driver.version: RemoteWebDriver</br><br>
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)</br><br>
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:66)</br><br>
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)</br><br>
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)</br><br>
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:433)</br><br>
+	at org.openqa.selenium.By&#36;ByClassName.findElement(By.java:387)</br><br>
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)</br><br>
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)</br><br>
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)</br><br>
+	at com.sun.proxy.&#36;Proxy17.click(Unknown Source)</br><br>
+	at stepdefinitions.NewStepDefinition.i_Select_Favourite_tab(NewStepDefinition.java:101)</br><br>
+	at &#10045;.Given I Select Favourite tab(adhoc.feature:20)</br><br>
+</br></div></td></tr><tr class="skipped"><td><b>Then </b> I should be able to select my favourites</td><td width="100">0.00s</td></tr><tr class="skipped"><td colspan="2"><img src="19-to-test-all-the-scenarios-when-the-user-is-logged-in_select-favourites-from-favourite-tab1466646897445.png"  /></td></tr></table></td></tr><tr class="passed"><td>After</td><td colspan="2"></td><td width="100">1.64s</td></tr><tr class="passed"><td colspan="4"><br></br></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr></table></td></tr><tr><td colspan="5"></td></tr></table>
+	</body>
+</html>
